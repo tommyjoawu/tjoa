@@ -7808,7 +7808,8 @@ textarea.form-control-lg {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  /*background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;*/
+  background-image: url("city.jpg");
 }
 
 .bg-secondary {
@@ -11317,9 +11318,9 @@ html {
   width: 100%;
   max-width: 7rem;
   height: 0.25rem;
-  background-color: #2c3e50;
+  background-color: white;
   border-radius: 1rem;
-  border-color: #2c3e50;
+  border-color: white;
 }
 .divider-custom .divider-custom-line:first-child {
   margin-right: 1rem;
@@ -11328,7 +11329,7 @@ html {
   margin-left: 1rem;
 }
 .divider-custom .divider-custom-icon {
-  color: #2c3e50;
+  color: white;
   font-size: 2rem;
 }
 .divider-custom.divider-light .divider-custom-line {

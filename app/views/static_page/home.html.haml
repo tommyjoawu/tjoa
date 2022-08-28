@@ -33,7 +33,7 @@
             %li.nav-item.mx-0.mx-lg-1
               %a.nav-link.py-3.px-0.px-lg-3.rounded{:href => "#contact"} Contact
     / Masthead
-    %header.masthead.bg-primary.text-white.text-center
+    %header.masthead.bg-primary.text-center{:style => "color: white"}
       .container.d-flex.align-items-center.flex-column
         / Masthead Avatar Image
         = inline_svg_tag "avataaars.svg", class: 'img masthead-avatar mb-5'
@@ -46,17 +46,17 @@
             %i.fas.fa-star
           .divider-custom-line
         / Masthead Subheading
-        %p.masthead-subheading.font-weight-light.mb-0 Software Engineer
+        %h1.masthead-subheading.font-weight-light.mb-0 Software Engineer with more than 3 years of experience
     / Portfolio Section
-    %section#portfolio.page-section.portfolio
+    %section#portfolio.page-section.portfolio{:style => "background-color: #1F3662"}
       .container
         / Portfolio Section Heading
-        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Portfolio
+        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0{:style => "color: white !important"} Portfolio
         / Icon Divider
         .divider-custom
           .divider-custom-line
           .divider-custom-icon
-            %i.fas.fa-star
+            %i.fa-solid.fa-folder-open
           .divider-custom-line
         / Portfolio Grid Items
         .row.justify-content-center
@@ -149,22 +149,45 @@
         / About Section Button
         .text-center.mt-4
           %a.btn.btn-xl.btn-outline-light{:href => "https://drive.google.com/file/d/1i-9-AVSvYOmXS8Rjr0txiSuOFygP7Puo/view?usp=sharing", target: "_blank"}
+            %h3
+              Download my CV!
             %i.fas.fa-download.me-2
-            Download my CV!
     / Contact Section
-    %section#contact.page-section
+    %section#contact.page-section{:style => "background-color: #1F3662"}
       .container
         / Contact Section Heading
-        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 Contact Me
+        %h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0.text-white Contact Me
         / Icon Divider
         .divider-custom
           .divider-custom-line
-          .divider-custom-icon
-            %i.fas.fa-star
+          .divider-custom-line
           .divider-custom-line
         / Contact Section Form
         .row.justify-content-center
-          .col-lg-8.col-xl-7
+
+          .col-1.ml-2
+            %a.btn.btn-outline-light.btn-social{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
+              %i.fab.fa-fw.fa-linkedin-in
+        .row.justify-content-center
+          .col-11
+            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
+              https://www.linkedin.com/in/tommy-joa-174859169/
+        .row.justify-content-center.mt-3              
+          .col-1
+            %a.btn.btn-outline-light.btn-social{:href => "", target: "_blank"}
+              %i.fab.fa-solid.fa-envelope
+        .row.justify-content-center.mt-3
+          .col-11
+            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
+              tommywj5@gmail.com
+        .row.justify-content-center.mt-3              
+          .col-1
+            %a.btn.btn-outline-light.btn-social{:href => "", target: "_blank"}
+              %i.fab.fa-brands.fa-whatsapp
+        .row.justify-content-center.mt-3
+          .col-11
+            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
+              +507 6483 6002
             / * * * * * * * * * * * * * * *
             / * * SB Forms Contact Form * *
             / * * * * * * * * * * * * * * *
@@ -172,46 +195,46 @@
             / To make this form functional, sign up at
             / https://startbootstrap.com/solution/contact-forms
             / to get an API token!
-            %form#contactForm{"data-sb-form-api-token" => "API_TOKEN"}
-              / Name input
-              .form-floating.mb-3
-                %input#name.form-control{"data-sb-validations" => "required", :placeholder => "Enter your name...", :type => "text"}/
-                %label{:for => "name"} Full name
-                .invalid-feedback{"data-sb-feedback" => "name:required"} A name is required.
-              / Email address input
-              .form-floating.mb-3
-                %input#email.form-control{"data-sb-validations" => "required,email", :placeholder => "name@example.com", :type => "email"}/
-                %label{:for => "email"} Email address
-                .invalid-feedback{"data-sb-feedback" => "email:required"} An email is required.
-                .invalid-feedback{"data-sb-feedback" => "email:email"} Email is not valid.
-              / Phone number input
-              .form-floating.mb-3
-                %input#phone.form-control{"data-sb-validations" => "required", :placeholder => "(123) 456-7890", :type => "tel"}/
-                %label{:for => "phone"} Phone number
-                .invalid-feedback{"data-sb-feedback" => "phone:required"} A phone number is required.
-              / Message input
-              .form-floating.mb-3
-                %textarea#message.form-control{"data-sb-validations" => "required", :placeholder => "Enter your message here...", :style => "height: 10rem", :type => "text"}
-                %label{:for => "message"} Message
-                .invalid-feedback{"data-sb-feedback" => "message:required"} A message is required.
-              / Submit success message
-              / 
-              / This is what your users will see when the form
-              / has successfully submitted
-              #submitSuccessMessage.d-none
-                .text-center.mb-3
-                  .fw-bolder Form submission successful!
-                  To activate this form, sign up at
-                  %br/
-                  %a{:href => "https://startbootstrap.com/solution/contact-forms"} https://startbootstrap.com/solution/contact-forms
-              / Submit error message
-              / 
-              / This is what your users will see when there is
-              / an error submitting the form
-              #submitErrorMessage.d-none
-                .text-center.text-danger.mb-3 Error sending message!
-              / Submit Button
-              %button#submitButton.btn.btn-primary.btn-xl.disabled{:type => "submit"} Send
+            / %form#contactForm{"data-sb-form-api-token" => "API_TOKEN"}
+            /   / Name input
+            /   .form-floating.mb-3
+            /     %input#name.form-control{"data-sb-validations" => "required", :placeholder => "Enter your name...", :type => "text"}/
+            /     %label{:for => "name"} Full name
+            /     .invalid-feedback{"data-sb-feedback" => "name:required"} A name is required.
+            /   / Email address input
+            /   .form-floating.mb-3
+            /     %input#email.form-control{"data-sb-validations" => "required,email", :placeholder => "name@example.com", :type => "email"}/
+            /     %label{:for => "email"} Email address
+            /     .invalid-feedback{"data-sb-feedback" => "email:required"} An email is required.
+            /     .invalid-feedback{"data-sb-feedback" => "email:email"} Email is not valid.
+            /   / Phone number input
+            /   .form-floating.mb-3
+            /     %input#phone.form-control{"data-sb-validations" => "required", :placeholder => "(123) 456-7890", :type => "tel"}/
+            /     %label{:for => "phone"} Phone number
+            /     .invalid-feedback{"data-sb-feedback" => "phone:required"} A phone number is required.
+            /   / Message input
+            /   .form-floating.mb-3
+            /     %textarea#message.form-control{"data-sb-validations" => "required", :placeholder => "Enter your message here...", :style => "height: 10rem", :type => "text"}
+            /     %label{:for => "message"} Message
+            /     .invalid-feedback{"data-sb-feedback" => "message:required"} A message is required.
+            /   / Submit success message
+            /   / 
+            /   / This is what your users will see when the form
+            /   / has successfully submitted
+            /   #submitSuccessMessage.d-none
+            /     .text-center.mb-3
+            /       .fw-bolder Form submission successful!
+            /       To activate this form, sign up at
+            /       %br/
+            /       %a{:href => "https://startbootstrap.com/solution/contact-forms"} https://startbootstrap.com/solution/contact-forms
+            /   / Submit error message
+            /   / 
+            /   / This is what your users will see when there is
+            /   / an error submitting the form
+            /   #submitErrorMessage.d-none
+            /     .text-center.text-danger.mb-3 Error sending message!
+            /   / Submit Button
+            /   %button#submitButton.btn.btn-primary.btn-xl.disabled{:type => "submit"} Send
     / Footer
     %footer.footer.text-center
       .container
@@ -220,9 +243,7 @@
           .col-lg-4.mb-5.mb-lg-0
             %h4.text-uppercase.mb-4 Location
             %p.lead.mb-0
-              2215 John Daniel Drive
-              %br/
-              Clark, MO 65243
+              Panama
           / Footer Social Icons
           .col-lg-4.mb-5.mb-lg-0
             %h4.text-uppercase.mb-4 Around the Web
