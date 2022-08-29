@@ -36,9 +36,12 @@
     %header.masthead.bg-primary.text-center{:style => "color: white"}
       .container.d-flex.align-items-center.flex-column
         / Masthead Avatar Image
-        = inline_svg_tag "avataaars.svg", class: 'img masthead-avatar mb-5'
+        / = inline_svg_tag "avataaars.svg", class: 'img masthead-avatar mb-5'
+        .row.justify-content-center
+          .col-4
+            %img.img-fluid{:alt => "...", :src => "/assets/me.png"}/
         / Masthead Heading
-        %h1.masthead-heading.text-uppercase.mb-0 Tommy Joa Wu
+        %h1.masthead-heading.mb-0.mt-4 Hi, i am Tommy
         / Icon Divider
         .divider-custom.divider-light
           .divider-custom-line
@@ -46,7 +49,7 @@
             %i.fas.fa-star
           .divider-custom-line
         / Masthead Subheading
-        %h1.masthead-subheading.font-weight-light.mb-0 Software Engineer with more than 3 years of experience
+        %h1.masthead-subheading.font-weight-light.mb-0 Software Engineer
     / Portfolio Section
     %section#portfolio.page-section.portfolio{:style => "background-color: #1F3662"}
       .container
@@ -114,8 +117,8 @@
             %i.fas.fa-star
           .divider-custom-line
         / About Section Content
-        .row
-          .offset-3.col-lg-3
+        .row.justify-content-center
+          .offset-2.col-5.offset-lg-2.col-lg-4
             .lead
               %h3
                 Ruby on Rails
@@ -132,7 +135,7 @@
               %h3
                 CSS
             / I am a Fullstack Software Engineer, my stack of tecnologies is composed of Ruby on Rails, Javascript, Node.js, Ajax, CSS, HTML5 and PostgreSQL. I have had the opportunities of working in bank related projects and government project with strict rules given by the clients.
-          .offset-1.col-lg-3
+          .col-5.offset-lg-2.col-lg-4
             .lead
               %h3
                 HTML
@@ -164,28 +167,35 @@
           .divider-custom-line
         / Contact Section Form
         .row.justify-content-center
-
-          .col-1.ml-2
+          .col-2.col-lg-1
             %a.btn.btn-outline-light.btn-social{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
               %i.fab.fa-fw.fa-linkedin-in
         .row.justify-content-center
-          .col-11
+          .col-lg-12
             %h4.text-center.text-secondary.text-white.mt-2.mr-3 
-              https://www.linkedin.com/in/tommy-joa-174859169/
+              www.linkedin.com/in/tommy-joa-174859169/
+        .row.justify-content-center.mt-3
+          .col-2.col-lg-1
+            %a.btn.btn-outline-light.btn-social{:href => "https://github.com/tommyjoawu", target: "_blank"}
+              %i.fab.fa-brands.fa-github
+        .row.justify-content-center
+          .col-lg-11
+            %h4.text-center.text-secondary.text-white.mt-2.mr-3 
+              github.com/tommyjoawu
         .row.justify-content-center.mt-3              
-          .col-1
-            %a.btn.btn-outline-light.btn-social{:href => "", target: "_blank"}
+          .col-2.col-lg-1
+            %a.btn.btn-outline-light.btn-social{:href => "mailto: tommywj5@gmail.com", target: "_blank"}
               %i.fab.fa-solid.fa-envelope
         .row.justify-content-center.mt-3
-          .col-11
+          .col-lg-11
             %h4.text-center.text-secondary.text-white.mt-2.mr-3 
               tommywj5@gmail.com
         .row.justify-content-center.mt-3              
-          .col-1
-            %a.btn.btn-outline-light.btn-social{:href => "", target: "_blank"}
+          .col-2.col-lg-1
+            %a.btn.btn-outline-light.btn-social{:href => "https://wa.me/50764836002?text=I%20am%20interested%20in%20your%20portfolio", target: "_blank"}
               %i.fab.fa-brands.fa-whatsapp
         .row.justify-content-center.mt-3
-          .col-11
+          .col-lg-11
             %h4.text-center.text-secondary.text-white.mt-2.mr-3 
               +507 6483 6002
             / * * * * * * * * * * * * * * *
@@ -236,36 +246,36 @@
             /   / Submit Button
             /   %button#submitButton.btn.btn-primary.btn-xl.disabled{:type => "submit"} Send
     / Footer
-    %footer.footer.text-center
-      .container
-        .row
-          / Footer Location
-          .col-lg-4.mb-5.mb-lg-0
-            %h4.text-uppercase.mb-4 Location
-            %p.lead.mb-0
-              Panama
-          / Footer Social Icons
-          .col-lg-4.mb-5.mb-lg-0
-            %h4.text-uppercase.mb-4 Around the Web
-            %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-              %i.fab.fa-fw.fa-facebook-f
-            %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-              %i.fab.fa-fw.fa-twitter
-            %a.btn.btn-outline-light.btn-social.mx-1{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
-              %i.fab.fa-fw.fa-linkedin-in
-            %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
-              %i.fab.fa-fw.fa-dribbble
-          / Footer About Text
-          .col-lg-4
-            %h4.text-uppercase.mb-4 About Freelancer
-            %p.lead.mb-0
-              Freelance is a free to use, MIT licensed Bootstrap theme created by
-              %a{:href => "http://startbootstrap.com"} Start Bootstrap
-              \.
+    / %footer.footer.text-center
+    /   .container
+    /     .row
+    /       / Footer Location
+    /       .col-lg-4.mb-5.mb-lg-0
+    /         %h4.text-uppercase.mb-4 Location
+    /         %p.lead.mb-0
+    /           Panama
+    /       / Footer Social Icons
+    /       .col-lg-4.mb-5.mb-lg-0
+    /         / %h4.text-uppercase.mb-4 Around the Web
+    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
+    /           %i.fab.fa-fw.fa-facebook-f
+    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
+    /           %i.fab.fa-fw.fa-twitter
+    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "https://www.linkedin.com/in/tommy-joa-174859169/", target: "_blank"}
+    /           %i.fab.fa-fw.fa-linkedin-in
+    /         %a.btn.btn-outline-light.btn-social.mx-1{:href => "#!"}
+    /           %i.fab.fa-fw.fa-dribbble
+    /       / Footer About Text
+    /       .col-lg-4
+    /         %h4.text-uppercase.mb-4 About Freelancer
+    /         %p.lead.mb-0
+    /           Freelance is a free to use, MIT licensed Bootstrap theme created by
+    /           %a{:href => "http://startbootstrap.com"} Start Bootstrap
+    /           \.
     / Copyright Section
     .copyright.py-4.text-center.text-white
       .container
-        %small Copyright © Your Website 2022
+        %small Built by Tommy Joa Wu
     / Portfolio Modals
     / Portfolio Modal 1
     #portfolioModal1.portfolio-modal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "portfolioModal1", :tabindex => "-1"}
